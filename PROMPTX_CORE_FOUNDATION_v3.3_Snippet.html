@@ -1,0 +1,39 @@
+[PROMPTX_CORE_FOUNDATION_v3.3_SNIPPET]
+@title: "PromptX Core Foundation (Minimal)"
+@version: "3.3"
+@date: "2025-08-24"
+@author: "Sebastian Hühn"
+@status: "Draft Minimal"
+@language: "EN"
+@description: "Minimal core foundation for PromptX v3.3 – context-optimized execution."
+
+[HEAD]
+@modular: true
+@context_optimized: true
+@compatibility: PML v3.8, KIP v5.6
+@structured_output: true
+@fallbacks: enabled
+
+[CORE_TAGS]
+<promptx_module>, <goal>, <instruction>, <output_mode>, <meta>
+
+[OUTPUT_RULES]
+@format: ["text", "json"]
+@copy_ready: true
+@truncate_if_exceeds(1024)
+
+[SECURITY]
+@protect: true
+@access_level: "trusted"
+
+[EXAMPLE]
+<promptx_module>
+  <goal>Create a safe and structured prompt</goal>
+  <instruction>Generate a concise JSON summary from input text</instruction>
+  <output_mode>@format: json</output_mode>
+  <meta>
+    created_by = "Sebastian"
+    project = "Core Demo"
+  </meta>
+</promptx_module>
+[/PROMPTX_CORE_FOUNDATION]

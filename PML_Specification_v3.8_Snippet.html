@@ -1,0 +1,36 @@
+[PML_SPECIFICATION_MIN_v3.8_SNIPPET]
+@title: "Prompt Markup Language – Minimal Specification"
+@version: "3.8"
+@date: "2025-08-24"
+@author: "Sebastian Hühn"
+@status: "draft"
+@license: "OPSL-1.0"
+@language: "DE / EN"
+@export_ready: true
+
+[REQUIRED_TAGS]
+<prompt>, <definition>, <instruction>, <output_config>
+
+[INLINE_COMMANDS]
+@format: ["text", "json"]
+@yield("example")
+@truncate_if_exceeds(1024)
+
+[VALIDATION_RULES]
+- <prompt> must exist exactly once
+- <definition> and <instruction> cannot be empty
+- <output_config> must declare a valid format
+- <context_block> (if used) must contain at least one <semantic_hint>
+
+[EXAMPLE]
+<prompt>
+  <definition>Generate a short factual summary</definition>
+  <instruction>Summarize the input text in 3 bullet points</instruction>
+  <context_block>
+    <semantic_hint>factual</semantic_hint>
+    <tone_suggestion>neutral</tone_suggestion>
+  </context_block>
+  <field name="source_text" type="text" required=true />
+  <output_config>@format: text</output_config>
+</prompt>
+[/PML_SPECIFICATION_MIN]

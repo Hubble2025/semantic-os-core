@@ -1,0 +1,22 @@
+# KIP_v5.6_SNIPPET — Minimal Context Fragment
+@title: "KIP_Specification_v5.6 - Minimal Specification"
+@version: "5.6"
+@date: "2025-08-24"
+@author: "Sebastian Hühn"
+@status: "draft-minimal"
+@license: "OPSL-1.0"
+
+@agent: assistant
+@task_sequence: ["ingest", "respond"]
+
+# Persist the latest user input into semantic memory
+@store("ctx.user.last_input")
+
+# Recall and produce a context-bound reply
+@recall("ctx.user.last_input")
+@yield("Acknowledged. Context stored and used for response.")
+
+# Reliability guard
+@retry.limit: 2
+@fallback.to: "safe_default.kip"
+@end

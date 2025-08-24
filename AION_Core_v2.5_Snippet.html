@@ -1,0 +1,46 @@
+[AION_CORE_MIN_v2.5_SNIPPET]
+@title: "AION Core – Minimal Execution & Trust Layer"
+@version: "2.5"
+@date: "2025-08-24"
+@author: "Sebastian Hühn"
+@status: "draft-minimal"
+@license: "OPSL-1.0"
+
+[GUARDS]
+@self_loop.governor: on
+@max_iterations: 3
+@confidence.threshold: 0.65
+@retry.limit: 2
+
+[TRUST_LAYER]
+@trust_score.min: 0.95
+@bias_check.domains: ["medical", "legal", "demographic"]
+@safety.profile: "USER_SAFETY_PROTOCOL v1.2"
+
+[FEEDBACK_LOOP]
+@metrics.collect: ["confidence", "latency", "hallucination_risk"]
+@on_low_confidence: @goto("fallback_safe")
+@on_violation: @goto("fallback_safe")
+
+[EXECUTION]
+@start: "task_main"
+@fallback: "fallback_safe"
+
+<task id="task_main">
+  @recall("ctx.user.last_input")
+  @validate.context(required=true)
+  @compute.trust()              # updates trust_score
+  @bias.guard()                 # runs bias_check.domains
+  @if("trust_score < 0.95") { @goto("fallback_safe") }
+  @yield("Processed with AION Core safeguards.")
+</task>
+
+<task id="fallback_safe">
+  @yield("Safe‑mode response. Please clarify your request or provide more context.")
+</task>
+
+[AUDIT_EXPORT]
+@log.channel: "aion/audit.log"
+@export.json: true
+@export.fields: ["timestamp","trust_score","confidence","route"]
+[/AION_CORE_MIN]
