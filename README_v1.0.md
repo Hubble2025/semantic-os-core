@@ -1,3 +1,9 @@
+
+
+![alt text](semantic_code_2.png)
+
+
+
 # 📘 Semantic OS – Standards & Modulübersicht (Bilingual)
 
 **Version:** 1.0  
