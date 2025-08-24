@@ -1,0 +1,6 @@
+# Hash für semantic-os-core_v1.0.zip
+# Erstellt am: 2025-08-25
+# Algorithmus: SHA-256
+
+Datei: semantic-os-core_v1.0.zip
+Hash:  7C67AF7DD0FF7CF542182581E29840FE71EF76B7C5EF31CC91C08290D02CA3FC
