@@ -1,0 +1,21 @@
+MIT License (Modified for Semantic OS, PromptX, PML, KIP, AION)
+
+Copyright (c) 2025 Sebastian Hühn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), including but not limited to the Semantic OS Core Modules, PromptX Framework Components, PML Language Files, KIP Protocol Definitions, AION Control Modules, and any related files uploaded to this repository, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+2. Any usage of the Software or its components, including PromptX, PML, KIP, AION, or Semantic OS-related files, in safety-critical systems, military applications, surveillance systems, or autonomous weapons is explicitly prohibited without prior written permission from the copyright holder.
+
+3. The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the Software or the use or other dealings in the Software.
+
+4. Redistribution of modified versions must clearly indicate all modifications and retain this license in full, including restrictions and disclaimers.
+
+5. Commercial use is permitted only if accompanied by proper attribution and compliance with all terms set forth in this license.
+
+6. This license does not grant rights to use the names "Semantic OS", "PromptX", "AION", "PML", or "KIP" in advertising or publicity without prior written permission.
+
+---
+
+This license is based on the standard MIT License with additional terms to protect specific intellectual property components within the Semantic OS & AION framework. It has been reviewed for public release readiness and complies with open-source distribution norms as of 2025.

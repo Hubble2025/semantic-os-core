@@ -1,0 +1,6 @@
+# 📦 Changelog – Semantic OS Core
+
+## [v1.0.0] – 2025-08-25
+- Initial public release of the Semantic OS Core Stack
+- Includes: PromptX Core v3.3, PML v4.3.2, KIP v6.0, AION Core v2.5
+- Added: Documentation (bilingual), License, Integrity hashes
